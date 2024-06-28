@@ -6,7 +6,7 @@ export default class RetriveData extends Command {
     data: Args.string({description: 'Dwn document Id'}),
   }
 
-  static override description = 'Retrive data from DWN'
+  static override description = 'Retrieve data from DWN'
 
   static override examples = ['<%= config.bin %> <%= command.id %>']
 
@@ -19,7 +19,7 @@ export default class RetriveData extends Command {
     const {args, flags} = await this.parse(RetriveData)
 
     if (args.data) {
-      const {web5, did: userDid} = await Web5.connect({password: flags.password})
+      const {did: userDid, web5} = await Web5.connect({password: flags.password})
       const {record} = await web5.dwn.records.read({
         message: {
           filter: {

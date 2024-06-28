@@ -3,12 +3,11 @@
   "description": "A new CLI generated with oclif",
   "version": "0.0.0",
   "author": "Pratap2018",
-  "type":"module",
-  
+  "type": "module",
   "bin": {
     "dwn-cli": "./bin/run.js"
   },
-  "bugs": "https://github.com/pratap/dwn-cli-app/issues",
+  "bugs": "https://github.com/decentralized-identity/dwn-cli-app/issues",
   "dependencies": {
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6",
@@ -42,11 +41,11 @@
     "/dist",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/pratap/dwn-cli-app",
+  "homepage": "https://github.com/decentralized-identity/dwn-cli-app",
   "keywords": [
     "oclif"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "dist/index.js",
   "oclif": {
     "bin": "dwn-cli",
