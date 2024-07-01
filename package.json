@@ -2,12 +2,47 @@
   "name": "dwn-cli-app",
   "description": "A new CLI generated with oclif",
   "version": "0.0.0",
-  "author": "Pratap2018",
+  "author": "Decentralized Identity Foundation",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/decentralized-identity/dwn-cli-sample.git",
+  "homepage": "https://github.com/decentralized-identity/dwn-cli-app",
+  "bugs": "https://github.com/decentralized-identity/dwn-cli-app/issues",
+  "keywords": [
+    "DWN"
+  ],
   "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "/bin",
+    "/dist",
+    "/oclif.manifest.json"
+  ],
+  "types": "dist/index.d.ts",
+  "pkg": {
+    "scripts": "./dist/**/*.js"
+  },
   "bin": {
     "dwn-cli": "./bin/run.js"
   },
-  "bugs": "https://github.com/decentralized-identity/dwn-cli-app/issues",
+  "oclif": {
+    "bin": "dwn-cli",
+    "dirname": "dwn-cli",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " "
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
   "dependencies": {
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6",
@@ -35,40 +70,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "files": [
-    "/bin",
-    "/dist",
-    "/oclif.manifest.json"
-  ],
-  "homepage": "https://github.com/decentralized-identity/dwn-cli-app",
-  "keywords": [
-    "oclif"
-  ],
-  "license": "Apache-2.0",
-  "main": "dist/index.js",
-  "oclif": {
-    "bin": "dwn-cli",
-    "dirname": "dwn-cli",
-    "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " "
-  },
-  "repository": "pratap/dwn-cli-app",
-  "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
-  },
-  "types": "dist/index.d.ts",
-  "pkg": {
-    "scripts": "./dist/**/*.js"
   }
 }
