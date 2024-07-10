@@ -69,7 +69,7 @@ okimsRazor:dwn-cli-sample kim$ ./bin/run.js all-data
 Output will look like:
 
 ```bash
-==============Doument list==========
+==============Document list==========
 1.  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 
 ```

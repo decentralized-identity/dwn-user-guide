@@ -25,7 +25,7 @@ export default class AllData extends Command {
     })
     // @ts-ignore
     if (response?.records?.length > 0) {
-      this.log('==============Doument list==========')
+      this.log('==============Document list==========')
     }
     // @ts-ignore
 
