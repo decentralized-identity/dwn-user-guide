@@ -63,7 +63,7 @@ Data is stored on the DWN :  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmu
 #### List the data in the DWN
 
 ```bash
-okimsRazor:dwn-cli-sample kim$ ./bin/run.js all-data
+./bin/run.js all-data
 ```
 
 Output will look like:
