@@ -6,10 +6,10 @@
 /tmp
 /node_modules
 oclif.manifest.json
+/.vscode
 
 /DATA
 dist
-package-lock.json
 pnpm-lock.yaml
 .pnp.*
 .yarn/*
@@ -18,6 +18,3 @@ pnpm-lock.yaml
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-
-

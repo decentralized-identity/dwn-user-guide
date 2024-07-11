@@ -1,6 +1,6 @@
 {
-  "name": "dwn-cli-app",
-  "description": "A new CLI generated with oclif",
+  "name": "DWN CLI App",
+  "description": "A simple CLI to interact with the Decentralized Web Nodes (DWN) APIs.",
   "version": "0.0.0",
   "author": "Decentralized Identity Foundation",
   "license": "Apache-2.0",
@@ -69,6 +69,6 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }
