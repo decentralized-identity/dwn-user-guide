@@ -28,7 +28,7 @@ npm run build
 
 - all-data: List all the DWN documents
 - create-did: Create a DID
-- help; Display help for dwn-cli.
+- help: Display help for dwn-cli.
 - plugins: List installed plugins.
 - reset-did: Reset didDocument
 - retrieve-data: Retrieve data from DWN
@@ -38,37 +38,37 @@ npm run build
 
 #### Create a DID
 
-```bash
+```sh
 ./bin/run.js create-did
 ```
 
 Output will look like:
 
-```bash
+```sh
 Created DID:  did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
 ```
 
 #### Write to the DWN
 
-```bash
+```sh
  ./bin/run.js store-data "hello world"
 ```
 
 Output will look like:
 
-```bash
+```sh
 Data is stored on the DWN :  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 ```
 
 #### List the data in the DWN
 
-```bash
+```sh
 ./bin/run.js all-data
 ```
 
 Output will look like:
 
-```bash
+```sh
 ==============Document list==========
 1.  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 
