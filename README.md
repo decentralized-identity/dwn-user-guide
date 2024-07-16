@@ -62,7 +62,7 @@ Output will look like:
 Data is stored on the DWN :  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 ```
 
-#### List the data in the DWN
+#### List the records in the DWN
 
 ```sh
 ./bin/run.js all-data
