@@ -9,7 +9,7 @@ A Decentralized Web Node (DWN) is a centralized personal and application data st
 DWNs provide the following benefits:
 
 - Reduced Reliance on Third Parties: Users are less dependent on centralized platforms that often collect and monetize their data.
-- Increased User Control: Users can choose what data to share and with whom, fostering a more secure and empowering online experience.
+- Increased User Control: Users can choose what data to share and with whom, fostering a more secure and empowering online experience via the use of [protocols](https://developer.tbd.website/docs/web5/learn/protocols).
 
 DWNs follow an open standard; see the DIF [Decentralized Web Node specification](https://identity.foundation/decentralized-web-node/spec/). DIF plays a vital role in addressing these challenges through standardization and education, paving the way for a future Web where privacy and data sovereignty are paramount.
 
