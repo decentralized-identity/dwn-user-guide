@@ -101,7 +101,21 @@ Message Content:  hello world
 
 ## Connecting to the DIF Community Node
 
-TODO
+```js
+const { did, web5 } = await Web5.connect({
+  didCreateOptions: {
+    dwnEndpoints: ['https://dwn.gcda.xyz'] // User provides google's community DWN instance
+  },
+  registration: {
+    onSuccess: () => {
+      // Registration succeeded, set a local storage value to indicate the user is registered and registration does not need to occur again.
+    },
+    onFailure: (error) => {
+      // Registration failed, display an error message to the user, and pass in the registration object again to retry next time the user connects.
+    }
+  }
+});
+```
 
 ## Running your own DWN server
 
