@@ -1,6 +1,6 @@
-# dwn-cli-app
+# dwn-user-guide
 
-This will get you up to speed with the basics of working with DWNs. This includes a minimal CLI project and additional guidance to get you started.
+This will get you up to speed with the basics of working with DWNs and DIF's DWN Community Node, powered by Google Cloud. This includes a minimal CLI project and additional guidance to get you started.
 
 ## Introduction
 
@@ -13,9 +13,19 @@ DWNs provide the following benefits:
 
 DWNs follow an open standard; see the DIF [Decentralized Web Node specification](https://identity.foundation/decentralized-web-node/spec/). DIF plays a vital role in addressing these challenges through standardization and education, paving the way for a future Web where privacy and data sovereignty are paramount.
 
+## About the DIF DWN Community Node
+
+TODO
+
 ## Basic CLI Tutorial
 
-This uses the `@web/api` package, which now uses the public hosted DWN.
+### About
+
+For simplicity, this sample uses [TBD's `@web/api` package](https://github.com/TBD54566975/web5-js), which handles the details of interacting with DWNs. Because this conforms to the DWN spec, you may use a different library or write your own to interact with DWNs.
+
+By default, the `@web5/api` package connects to TBD's DWN instance. You can configure this code to connect to other instances, such as your own self-hosted instance or DIF's Community Node. 
+
+We'll start with a basic DWN command line example, which will use the default (TBD's) DWN node, and then update it to use DIF's Community Node.
 
 ### Install
 
@@ -87,6 +97,10 @@ Output will look like:
 Author : did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
 Message Content:  hello world
 ```
+
+## Connecting to the DIF Community Node
+
+TODO
 
 ## Running your own DWN server
 
