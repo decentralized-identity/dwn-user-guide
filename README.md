@@ -4,7 +4,7 @@ This will get you up to speed with the basics of working with DWNs. This include
 
 ## Introduction
 
-A Decentralized Web Node (DWN) is a centralized personal and application data storage and message relay node. Users may have multiple nodes that replicate their data between them.
+A Decentralized Web Node (DWN) is a decentralized personal and application data storage and message relay node. Users may have multiple nodes that replicate their data between them.
 
 DWNs provide the following benefits:
 
