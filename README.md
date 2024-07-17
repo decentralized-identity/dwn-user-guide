@@ -1,10 +1,11 @@
-# dwn-user-guide
+# DWN Community Node User Guide
 
-This will get you up to speed with the basics of working with DWNs and DIF's DWN Community Node, powered by Google Cloud. This includes a minimal CLI project and additional guidance to get you started.
+This will get you up to speed with the basics of working with Decentralized Web Nodes (DWNs) and DIF's DWN Community Node, powered by Google Cloud. This includes a minimal CLI project and additional guidance to get you started.
+![dwn_community_node](https://github.com/user-attachments/assets/0f1617d2-5dec-4a74-9f70-a9f5634ebec0)
 
 ## Introduction
 
-A Decentralized Web Node (DWN) is a decentralized personal and application data storage and message relay node. Users may have multiple nodes that replicate their data between them.
+A DWN is a decentralized personal and application data storage and message relay node. Users may have multiple nodes that replicate their data between them.
 
 DWNs provide the following benefits:
 
