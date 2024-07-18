@@ -1,7 +1,7 @@
 import {Command, Flags} from '@oclif/core'
 import {Web5} from '@web5/api'
 
-import { web5CommunityConfig } from '../../config/web5-config.js'
+import { web5DefaultConfig } from '../../config/web5-config.js'
 
 export default class AllData extends Command {
   static override description = 'List all the DWN documents'
@@ -17,7 +17,7 @@ export default class AllData extends Command {
 
 // move to a reusable config location
 
-    const { did, web5 } = await Web5.connect({ password: flags.password, ...web5CommunityConfig });
+    const { did, web5 } = await Web5.connect({ password: flags.password, ...web5DefaultConfig });
 
     const response = await web5.dwn.records.query({
       message: {
