@@ -1,5 +1,5 @@
 {
-  "name": "DWN CLI App",
+  "name": "dwn-cli",
   "description": "A simple CLI to interact with the Decentralized Web Nodes (DWN) APIs.",
   "version": "0.0.0",
   "author": "Decentralized Identity Foundation",

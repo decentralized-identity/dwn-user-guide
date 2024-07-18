@@ -3,4 +3,4 @@
 // eslint-disable-next-line n/shebang
 import { execute } from '@oclif/core'
 
-execute({ development: true, dir: import.meta.url })
+await execute({ development: true, dir: import.meta.url })
