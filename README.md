@@ -1,6 +1,6 @@
 # DWN Community Node User Guide
 
-This will get you up to speed with the basics of working with Decentralized Web Nodes (DWNs) and DIF's DWN Community Node, powered by Google Cloud. This includes a minimal CLI project and additional guidance to get you started.
+This will get you up to speed with the basics of working with Decentralized Web Nodes (DWNs) and DIF's DWN Community Node, powered by TBD and Google Cloud. This includes a minimal CLI project and additional guidance to get you started.
 ![dwn_community_node](https://github.com/user-attachments/assets/0f1617d2-5dec-4a74-9f70-a9f5634ebec0)
 
 ## Introduction
@@ -16,7 +16,11 @@ DWNs follow an open standard; see the DIF [Decentralized Web Node specification]
 
 ## About the DIF DWN Community Node
 
-TODO
+TBD and Google Cloud have partnered to enable DIF’s DWN Community Node. The goal is to make it easy for builders to get started with next generation web infrastructure.
+
+The Community Node is a reliable sandbox for staging, pre-production, or testing -- not production use.
+
+You can connect to the Community Node easily by passing the endpoint when calling `Web5.connect()`, as shown below.
 
 ## Basic CLI Tutorial
 
@@ -100,7 +104,11 @@ Author: did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
 Content: hello world
 ```
 
-## Connecting to the DIF Community Node
+## The DIF Community Node
+
+### Connecting
+
+To connect to the community node, simply pass https://dwn.gcda.xyz to the `dwnEndpoints` array as shown below:
 
 ```js
 const {did, web5} = await Web5.connect({
@@ -117,6 +125,16 @@ const {did, web5} = await Web5.connect({
   },
 })
 ```
+
+### Limits & Terms of Use
+
+- Reminder: not production use
+  - While the Community Node is a stable testbed for experimenting with DWNs, it's not intended for long-term or production use
+  - Data can be deleted at any time!
+- Limits
+  - Each DID gets 1 gig of storage
+  - Records for storage unless the payload exceeds 30k
+- Terms of use: To use the community node, you agree to the terms of service: https://dwn.gcda.xyz/registration/terms-of-service
 
 ## Running your own DWN server
 
