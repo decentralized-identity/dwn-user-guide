@@ -11,7 +11,6 @@ export default class RetriveData extends Command {
   static override examples = ['<%= config.bin %> <%= command.id %>']
 
   static override flags = {
-    // flag with a value (-n, --name=VALUE)
     password: Flags.string({char: 'p', description: 'Password'}),
   }
 
@@ -19,7 +18,7 @@ export default class RetriveData extends Command {
     const {args, flags} = await this.parse(RetriveData)
 
     if (args.data) {
-      const {did: userDid, web5} = await Web5.connect({password: flags.password})
+      const {web5} = await Web5.connect({password: flags.password})
       const {record} = await web5.dwn.records.read({
         message: {
           filter: {
@@ -29,9 +28,10 @@ export default class RetriveData extends Command {
         },
       })
       this.log('============Record Data=================')
-      this.log('Author :', record?.author)
-      this.log('Message Content: ', await record.data.text())
+      this.log('Author:', record?.author)
+      this.log('Content:', await record.data.text())
 
+      // eslint-disable-next-line n/no-process-exit
       process.exit(0)
     }
   }

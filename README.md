@@ -24,7 +24,7 @@ TODO
 
 For simplicity, this sample uses [TBD's `@web/api` package](https://github.com/TBD54566975/web5-js), which handles the details of interacting with DWNs. Because this conforms to the DWN spec, you may use a different library or write your own to interact with DWNs.
 
-By default, the `@web5/api` package connects to TBD's DWN instance. You can configure this code to connect to other instances, such as your own self-hosted instance or DIF's Community Node. 
+By default, the `@web5/api` package connects to TBD's DWN instance. You can configure this code to connect to other instances, such as your own self-hosted instance or DIF's Community Node.
 
 We'll start with a basic DWN command line example, which will use the default (TBD's) DWN node, and then update it to use DIF's Community Node.
 
@@ -58,7 +58,7 @@ npm run build
 Output will look like:
 
 ```sh
-Created DID:  did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
+Created DID: did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
 ```
 
 #### Write to the DWN
@@ -70,7 +70,7 @@ Created DID:  did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
 Output will look like:
 
 ```sh
-Data is stored on the DWN :  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
+Record ID: bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 ```
 
 #### List the records in the DWN
@@ -83,28 +83,30 @@ Output will look like:
 
 ```sh
 ==============Document list==========
-1.  bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
+1. bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 
 ```
-#### Retreive and read DWN record
+
+#### Retrieve a DWN record by record ID
 
 ```sh
 ./bin/run.js retrieve-data bafyreih4rqmu4jztwoews26onwda3y7p4gfguevke2cxhvtvmul73bl4v4
 ```
 
-Output will look like: 
+Output will look like:
+
 ```sh
 ============Record Data=================
-Author : did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
-Message Content:  hello world
+Author: did:dht:43ffbao7fxkhofcxpody87dz74cp5ynx8bsed4iudtzqk7gimewy
+Content: hello world
 ```
 
 ## Connecting to the DIF Community Node
 
 ```js
-const { did, web5 } = await Web5.connect({
+const {did, web5} = await Web5.connect({
   didCreateOptions: {
-    dwnEndpoints: ['https://dwn.gcda.xyz'] // User provides google's community DWN instance
+    dwnEndpoints: ['https://dwn.gcda.xyz'], // User provides google's community DWN instance
   },
   registration: {
     onSuccess: () => {
@@ -112,9 +114,9 @@ const { did, web5 } = await Web5.connect({
     },
     onFailure: (error) => {
       // Registration failed, display an error message to the user, and pass in the registration object again to retry next time the user connects.
-    }
-  }
-});
+    },
+  },
+})
 ```
 
 ## Running your own DWN server
