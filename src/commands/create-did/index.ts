@@ -3,6 +3,8 @@ import {Web5} from '@web5/api'
 import {webcrypto} from 'node:crypto'
 import fs from 'node:fs'
 
+import { web5CommunityConfig } from '../../config/web5-config.js'
+
 // @ts-ignore
 if (!globalThis.crypto) globalThis.crypto = webcrypto
 
@@ -18,7 +20,7 @@ export default class CreateDid extends Command {
   async run(): Promise<void> {
     const {flags} = await this.parse(CreateDid)
 
-    const {did: userDid, web5} = await Web5.connect({password:flags.password})
+    const {did: userDid, web5} = await Web5.connect({password:flags.password, ...web5CommunityConfig})
 
     this.log('Created DID:', userDid)
     fs.writeFileSync('DATA/did.json', JSON.stringify({did: userDid}))

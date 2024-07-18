@@ -1,6 +1,8 @@
 import {Args, Command, Flags} from '@oclif/core'
 import {Web5} from '@web5/api'
 
+import { web5CommunityConfig } from '../../config/web5-config.js'
+
 export default class RetriveData extends Command {
   static override args = {
     data: Args.string({description: 'Dwn document Id'}),
@@ -18,7 +20,7 @@ export default class RetriveData extends Command {
     const {args, flags} = await this.parse(RetriveData)
 
     if (args.data) {
-      const {web5} = await Web5.connect({password: flags.password})
+      const {web5} = await Web5.connect({password: flags.password, ...web5CommunityConfig})
       const {record} = await web5.dwn.records.read({
         message: {
           filter: {
