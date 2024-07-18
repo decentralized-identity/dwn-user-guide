@@ -43,7 +43,6 @@ npm run build
 - create-did: Create a DID
 - help: Display help for dwn-cli.
 - plugins: List installed plugins.
-- reset-did: Reset didDocument
 - retrieve-data: Retrieve records from DWN
 - store-data: Store data to DWN
 
